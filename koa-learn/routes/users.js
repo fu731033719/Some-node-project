@@ -11,6 +11,7 @@ router.get('/bar', function (ctx, next) {
 })
 
 router.post('/addPerson', async function (ctx, next) {
+  console.log(ctx)
   const person = new Person({
     name: ctx.request.body.name,
     age: ctx.request.body.age
